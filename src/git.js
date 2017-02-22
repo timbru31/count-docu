@@ -18,7 +18,7 @@ var getFilesInCommit = function (commitId, docGitPath) {
 var getChangeLog = function (options, cb) {
     var exec = require('child_process').exec;
     var maxCommits = options.maxCommits || 5
-    var cmd = 'git log -n ' + maxCommits + '  -- src';
+    var cmd = 'git log -n ' + maxCommits + '  -- '+options.source;
 
     exec(cmd, function (error, stdout, stderr) {
         var history = [];
@@ -34,7 +34,7 @@ var getChangeLog = function (options, cb) {
                     date: date,
                     message: result[4]
                 }
-                var files = getFilesInCommit(id, options.src);
+                var files = getFilesInCommit(id, options.source);
                 if (files.length>0) {
                     historyCommit.files = files;
                     history.push(historyCommit);

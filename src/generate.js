@@ -117,7 +117,7 @@ function generate(options) {
     }
 
     if (options.maxCommits) {
-        require('./git').getChangeLog({maxCommits: options.maxCommits}, function (history) {
+        require('./git').getChangeLog(options, function (history) {
 
             doc.history = history;
             _renderDoc();

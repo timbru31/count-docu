@@ -22,4 +22,3 @@ if (x==1) javascript.format("nicely");
 You can integrate [plantuml](http://www.plantuml.com) diagrams
 
 ![diagram](diagram.puml)
-
