@@ -1,6 +1,7 @@
 This npm module helps generate a single html page from a set of markdown files, images and plantuml
 documents. 
 
+
 # How to use
 
 Features are best explored by looking into the [documentation](//sinnerschrader.github.io/count-docu/).
