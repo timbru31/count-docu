@@ -3,10 +3,14 @@ var getFilesInCommit = function (commitId, docGitPath) {
     var cmd = 'git diff-tree --name-only -r ' + commitId;
     var stdout = exec(cmd);
 
-    var pattern = new RegExp(docGitPath+'.*\.md');
-    var files = new String(stdout).split('\n').filter(function(filename) {
-        return filename.match(pattern)!=null;
-    }). map(function(filename) {
+    if (process.cwd().length < docGitPath.length) {
+        docGitPath = docGitPath.substring(process.cwd().length+1);
+    }
+
+    var pattern = new RegExp(docGitPath + '.*\.md');
+    var files = new String(stdout).split('\n').filter(function (filename) {
+        return filename.match(pattern) != null;
+    }).map(function (filename) {
         var ref = filename.substring(docGitPath.length);
         ref = require('./util').convertPathToLink(ref);
         return ref;
@@ -18,7 +22,7 @@ var getFilesInCommit = function (commitId, docGitPath) {
 var getChangeLog = function (options, cb) {
     var exec = require('child_process').exec;
     var maxCommits = options.maxCommits || 5
-    var cmd = 'git log -n ' + maxCommits + '  -- '+options.source;
+    var cmd = 'git log -n ' + maxCommits + '  -- ' + options.source;
 
     exec(cmd, function (error, stdout, stderr) {
         var history = [];
@@ -35,7 +39,7 @@ var getChangeLog = function (options, cb) {
                     message: result[4]
                 }
                 var files = getFilesInCommit(id, options.source);
-                if (files.length>0) {
+                if (files.length > 0) {
                     historyCommit.files = files;
                     history.push(historyCommit);
                 }
