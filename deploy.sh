@@ -57,7 +57,7 @@ ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
 ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
 ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
 openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in ./count-docu-rssa.enc -out count-docu-rssa -d
-chmod 600 travis_rsa
+chmod 600 count-docu-rssa
 eval `ssh-agent -s`
 ssh-add count-docu-rssa
 
