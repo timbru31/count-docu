@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Documentation</title>
+
+    <!-- Bootstrap -->
+    <link href="bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="highlight.js/styles/github.css">
+    <link rel="stylesheet" href="main.css"/>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+    <div class="js_header bs-docs-header" style="background-color: #563d7c;" id="content" tabindex="-1">
+        <div class="container" >
+            <h1 style="color:#fff">Documentation</h1>
+            <p style="color:#cdbfe3">Nice project with a nice documentation</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9" style="position:relative">
+                <div>
+                    <h2 id="history">History</h2>
+                    <table class="table">
+                        <tr>
+                            <th>date</th>
+                            <th>author</th>
+                            <th>message</th>
+                            <th>changed chapters</th>
+                        </tr>
+                    </table>
+                </div>
+
+                    <h2 id="_introduction">1 Introduction</h2>
+                    
+                        <p>This is a chapter intro text.</p>
+<p><div class="center-block caption-fix">
+    <img src="diagram.puml" class="center-block img-responsive" alt="title" />
+    <div class="caption">
+        <p >diagram</p>
+    </div>
+</div> </p>
+
+                        <h3 id="_introduction_documentation">1.1 Documentation</h3>
+                        <p>This is the sub chapter &quot;Documentation&quot;</p>
+<h4>Images</h4><p><div class="center-block caption-fix">
+    <img src="image.jpg" class="center-block img-responsive" alt="title" />
+    <div class="caption">
+        <p >image</p>
+    </div>
+</div>.</p>
+<h4>Tables</h4><table class="table table-bordered table-striped">
+<thead>
+<tr>
+<th>this</th>
+<th>is a</th>
+<th>table</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>b</td>
+<td>c</td>
+</tr>
+<tr>
+<td>a</td>
+<td>b</td>
+<td>c</td>
+</tr>
+</tbody>
+</table>
+<h4>Sourcecode</h4><pre><code class="lang-javascript"><span class="hljs-keyword">if</span> (x==<span class="hljs-number">1</span>) javascript.format(<span class="hljs-string">"nicely"</span>);
+</code></pre>
+<h4>Diagrams</h4><p>You can integrate <a href="http://www.plantuml.com">plantuml</a> diagrams</p>
+<p><div class="center-block caption-fix">
+    <img src="diagram.puml" class="center-block img-responsive" alt="title" />
+    <div class="caption">
+        <p >diagram</p>
+    </div>
+</div></p>
+
+                        <h3 id="_introduction_special_features">1.2 Special Features</h3>
+                        <h4>Callout</h4><p>There are three different callouts : warning, danger and info.</p>
+<pre><code class="lang-md"> &gt; <span class="hljs-string">[[danger]]</span>  __headline__
+ &gt; Here comes the important info
+ &gt;
+</code></pre>
+<div class="bs-callout bs-callout-danger"><p> <strong>headline</strong></p>
+<p>Here comes the important info</p>
+</div><h4>Link to Chapter</h4><pre><code class="lang-md">[<span class="hljs-link_label">Link to Documentation</span>](<span class="hljs-link_url">ref:/Introduction/Documentation</span>)
+</code></pre>
+<p> <a href="#_introduction_documentation">Link to Documentation</a></p>
+<p> Links are checked at generation time and broken links fail the generation.</p>
+
+            </div>
+            <div class="col-md-3">
+                <nav id="navigation" class="bs-docs-sidebar affix">
+                    <ul class="nav bs-docs-sidenav">
+                        <li>
+                            <a href="#history" class="history-nav">History</a>
+                        </li>
+                            <li>
+                                <a href="#_introduction">1 Introduction</a>
+                                <ul class="nav">
+                                        <li>
+                                            <a href="#_introduction_documentation">1.1 Documentation</a>
+                                        </li>
+                                        <li>
+                                            <a href="#_introduction_special_features">1.2 Special Features</a>
+                                        </li>
+                                </ul>
+                            </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>generated on 22.2.17 by <a href="https://github.com/sinnerschrader/count-docu">count-docu</a></p>
+    </footer>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="jquery/dist/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/dist/js/bootstrap.js"></script>
+    <script>
+        var headerHeight = document.querySelector(".js_header").getBoundingClientRect().height;
+        var nav = $("#navigation");
+        function checkScroll() {
+            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+            if (headerHeight<scrollTop) {
+                nav.addClass("affix");
+            } else{
+                nav.removeClass("affix");
+            }
+        }
+        function runOnScroll() {
+            checkScroll();
+        }
+        window.addEventListener("scroll", runOnScroll);
+        $('body').scrollspy({target: '#navigation'})
+        checkScroll();
+
+        $(document).ready(function () {
+            $('#navigation a').click(function(){
+                var match = $(this).attr('href').match(/#\S+/);
+                ga('send', 'pageview', location.pathname + match[0]);
+            });
+        });
+    </script>
+    </body>
+</html>
