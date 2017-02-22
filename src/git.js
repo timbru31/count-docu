@@ -1,0 +1,48 @@
+var getFilesInCommit = function (commitId, docGitPath) {
+    var exec = require('child_process').execSync;
+    var cmd = 'git diff-tree --name-only -r ' + commitId;
+    var stdout = exec(cmd);
+
+    var pattern = new RegExp(docGitPath+'.*\.md');
+    var files = new String(stdout).split('\n').filter(function(filename) {
+        return filename.match(pattern)!=null;
+    }). map(function(filename) {
+        var ref = filename.substring(docGitPath.length);
+        ref = require('./util').convertPathToLink(ref);
+        return ref;
+    })
+    return files;
+
+}
+
+var getChangeLog = function (options, cb) {
+    var exec = require('child_process').exec;
+    var maxCommits = options.maxCommits || 5
+    var cmd = 'git log -n ' + maxCommits + '  -- src';
+
+    exec(cmd, function (error, stdout, stderr) {
+        var history = [];
+        var commits = stdout.split('commit');
+        commits.forEach(function (commit) {
+            var result = commit.match(/(.*)\nAuthor: (.*)<.*>\nDate: (.*)([\s\S]*)/);
+            if (result != null) {
+                var id = result[1].trim();
+                var date = new Date(Date.parse(result[3]));
+                var historyCommit = {
+                    id: id,
+                    author: result[2],
+                    date: date,
+                    message: result[4]
+                }
+                var files = getFilesInCommit(id, options.src);
+                if (files.length>0) {
+                    historyCommit.files = files;
+                    history.push(historyCommit);
+                }
+            }
+        })
+        cb(history);
+    });
+}
+
+module.exports.getChangeLog = getChangeLog;
