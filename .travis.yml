@@ -11,8 +11,7 @@ install:
  - npm run clean
  - chmod u+x deploy.sh
 
-after_success:
-  - chmod a+x deploy.sh
+script:
   - ./deploy.sh
 
 

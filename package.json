@@ -2,6 +2,24 @@
   "name": "count-docu",
   "version": "0.0.1",
   "main": "src/index.js",
+  "description": "Generated documentation",
+  "author": {
+    "name": "Stefan Meyer",
+    "email": "stefan.meyer@sinnerschrader.com"
+  },
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/sinnerschrader/aem-react/blob/master/LICENSE.md"
+  },
+  "keywords": [
+    "node",
+    "markdown",
+    "plantuml"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://www.github.com/sinnerschrader/count-docu"
+  },
   "scripts": {
     "init": "mkdir -p dist && npm install",
     "dist": "pwd && ls -ll && npm run clean && npm run init && npm run render && npm run copy && ls -ll dist/",
