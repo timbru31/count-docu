@@ -28,3 +28,12 @@ maxCommits | - | number of git commits to be displayed in history
 headerColor|#fff| color of title
 headerBgColor|#563d7c| color of header
 headerDescriptionColor|#cdbfe3| color of description
+
+# Credits
+
+## Plantuml
+This software includes the awesome plantuml library (MIT license) from [plantuml.com](//www.plantuml.com)
+
+## node-plantuml
+
+Modified bits and pieces from [node-plantuml)](https://github.com/markushedvall/node-plantuml) are included in this software.

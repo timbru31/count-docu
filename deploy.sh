@@ -6,6 +6,7 @@ TARGET_BRANCH="gh-pages"
 OUT_DIR=dist
 
 function doCompile {
+  npm run clean
   npm run dist
 }
 
