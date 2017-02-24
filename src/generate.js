@@ -85,7 +85,8 @@ function generate(options) {
         maxCommits: 10,
         headerColor: '#fff',
         headerBgColor: '#563d7c',
-        headerDescriptionColor: '#cdbfe3'
+        headerDescriptionColor: '#cdbfe3',
+        docGitPath: 'src'
     };
 
     if (options) {

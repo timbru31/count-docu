@@ -3,10 +3,6 @@ var getFilesInCommit = function (commitId, docGitPath) {
     var cmd = 'git diff-tree --name-only -r ' + commitId;
     var stdout = exec(cmd);
 
-    if (process.cwd().length < docGitPath.length) {
-        docGitPath = docGitPath.substring(process.cwd().length+1);
-    }
-
     var pattern = new RegExp(docGitPath + '.*\.md');
     var files = new String(stdout).split('\n').filter(function (filename) {
         return filename.match(pattern) != null;
@@ -38,7 +34,7 @@ var getChangeLog = function (options, cb) {
                     date: date,
                     message: result[4]
                 }
-                var files = getFilesInCommit(id, options.source);
+                var files = getFilesInCommit(id, options.docGitPath);
                 if (files.length > 0) {
                     historyCommit.files = files;
                     history.push(historyCommit);
