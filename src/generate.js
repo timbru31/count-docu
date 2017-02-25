@@ -38,7 +38,7 @@ var readChapter = function (dirName, level, options, link) {
                 }
             } else if ("puml" === ext) {
                 var content = fs.readFileSync(path, "UTF-8");
-                var vendor = __dirname+'/../vendor/plantuml.jar';
+                var vendor = __dirname + '/../vendor/plantuml.jar';
                 plantuml.generate(path, {format: 'png'}, vendor, function (e, buffer) {
                     fs.writeFileSync(options.targetPath + "/" + fileName, buffer);
                 })
@@ -103,9 +103,9 @@ function generate(options) {
     var doc = readChapter(options.source, 1, {targetPath: targetPath});
     doc.title = options.title;
     doc.description = options.description;
-    doc.headerBgColor=options.headerBgColor;
-    doc.headerColor=options.headerColor;
-    doc.headerDescriptionColor =options.headerDescriptionColor;
+    doc.headerBgColor = options.headerBgColor;
+    doc.headerColor = options.headerColor;
+    doc.headerDescriptionColor = options.headerDescriptionColor;
     doc.date = new Date();
     doc.links = collectLinks(doc);
 
@@ -121,14 +121,19 @@ function generate(options) {
         require('./git').getChangeLog(options, function (history) {
 
             doc.history = history;
+            history.forEach(function (entry) {
+                entry.links = entry.files.map(function (file) {
+                    return {
+                        link: file,
+                        exists: doc.links.indexOf(refToLinkConverter(file)) >= 0
+                    }
+                });
+            });
             _renderDoc();
-
         })
     } else {
         _renderDoc();
     }
-
-
 }
 
 module.exports = generate;

@@ -44,10 +44,16 @@
                                 <td>{{author}}</td>
                                 <td>{{{plaintext message}}}</td>
                                 <td>
-                                    <ul>
-                                        {{#files}}
-                                        <li><a href="#{{ref .}}">{{.}}</a></li>
-                                        {{/files}}
+                                    <li>
+                                        {{#links}}
+                                        <li>
+                                            {{#if exists}}
+                                                <a href="{{ref link}}">{{link}}</a>
+                                            {{else}}
+                                                <a class="broken-link">{{link}}</a>
+                                            {{/if}}
+                                        </li>
+                                        {{/links}}
                                     </ul>
                                 </td>
                             </tr>

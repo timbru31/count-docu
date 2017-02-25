@@ -119,6 +119,8 @@ var init = function (options) {
         }
         return link;
     });
+    
+
 }
 var render = function (template, ctx, options) {
     init(options);
