@@ -267,3 +267,7 @@ h4, h5, h6 {
 .history-nav {
     font-style: italic;
 }
+
+.broken-link {
+    text-decoration: line-through;
+}
