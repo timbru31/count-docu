@@ -3,10 +3,10 @@ node_js:
   - "5"
 
 before_install:
-  - sudo add-apt-repository ppa:pov/wkhtmltopdf -y
+  - wget http://download.gna.org/wkhtmltopdf/0.12/0.12.4/wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
+  - tar xvf wkhtmltox-0.12.4_linux-generic-amd64.tar.xz
   - sudo apt-get -qq update
   - sudo apt-get install -y graphviz
-  - sudo apt-get install -y wkhtmltopdf
 
 install:
  - npm install
@@ -15,6 +15,7 @@ install:
 
 script:
   - ./deploy.sh
+
 
 
 env:
