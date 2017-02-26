@@ -271,3 +271,8 @@ h4, h5, h6 {
 .broken-link {
     text-decoration: line-through;
 }
+
+.row-pdf {
+    margin-left:0px;
+    margin-right:0px;
+}
