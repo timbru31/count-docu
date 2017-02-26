@@ -24,16 +24,29 @@
         <div class="container" >
             <h1 style="color:#fff">Documentation</h1>
             <p style="color:#cdbfe3">Nice project with a nice documentation</p>
-                <div style="float:right;">
-                    <a href="index.pdf" target="_blank" type="button" class="btn btn-default">
-                        <span class="glyphicon glyphicon-download-alt"> PDF</span>
-                    </a>
-                </div>
         </div>
     </div>
     <div class="container">
-        <div class="row ">
-            <div class="col-md-9" style="position:relative">
+                <nav id="navigation" >
+                    <ul class="nav ">
+                        <li>
+                            <a href="#history" class="history-nav">History</a>
+                        </li>
+                            <li>
+                                <a href="#_introduction">1 Introduction</a>
+                                    <ul class="nav">
+                                            <li>
+                                                <a href="#_introduction_documentation">1.1 Documentation</a>
+                                            </li>
+                                            <li>
+                                                <a href="#_introduction_special_features">1.2 Special Features</a>
+                                            </li>
+                                    </ul>
+                            </li>
+                    </ul>
+
+        <div class="row row-pdf">
+            <div class="" style="position:relative">
                 <div>
                     <h2 id="history">History</h2>
                     <table class="table">
@@ -121,26 +134,6 @@
 <p> Links are checked at generation time and broken links fail the generation.</p>
 
             </div>
-            <div class="col-md-3">
-                <nav id="navigation" class="bs-docs-sidebar affix">
-                    <ul class="nav bs-docs-sidenav">
-                        <li>
-                            <a href="#history" class="history-nav">History</a>
-                        </li>
-                            <li>
-                                <a href="#_introduction">1 Introduction</a>
-                                <ul class="nav">
-                                        <li>
-                                            <a href="#_introduction_documentation">1.1 Documentation</a>
-                                        </li>
-                                        <li>
-                                            <a href="#_introduction_special_features">1.2 Special Features</a>
-                                        </li>
-                                </ul>
-                            </li>
-                    </ul>
-                </nav>
-            </div>
         </div>
     </div>
     <footer class="footer">
@@ -151,30 +144,5 @@
     <script src="jquery/dist/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap/dist/js/bootstrap.js"></script>
-    <script>
-        var headerHeight = document.querySelector(".js_header").getBoundingClientRect().height;
-        var nav = $("#navigation");
-        function checkScroll() {
-            var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (headerHeight<scrollTop) {
-                nav.addClass("affix");
-            } else{
-                nav.removeClass("affix");
-            }
-        }
-        function runOnScroll() {
-            checkScroll();
-        }
-        window.addEventListener("scroll", runOnScroll);
-        $('body').scrollspy({target: '#navigation'})
-        checkScroll();
-
-        $(document).ready(function () {
-            $('#navigation a').click(function(){
-                var match = $(this).attr('href').match(/#\S+/);
-                ga('send', 'pageview', location.pathname + match[0]);
-            });
-        });
-    </script>
     </body>
 </html>
