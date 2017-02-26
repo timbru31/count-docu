@@ -3,7 +3,7 @@ node_js:
   - "5"
 
 before_install:
-  - sudo add-apt-repository ppa:pov/wkhtmltopdf
+  - sudo add-apt-repository ppa:pov/wkhtmltopdf -y
   - sudo apt-get -qq update
   - sudo apt-get install -y graphviz
   - sudo apt-get install -y wkhtmltopdf
