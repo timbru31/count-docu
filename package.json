@@ -22,7 +22,7 @@
   },
   "scripts": {
     "init": "mkdir -p dist && npm install",
-    "dist": "pwd && ls -ll && npm run clean && npm run init && npm run render && npm run pdf && ls -ll dist/",
+    "dist": "pwd && ls -ll && npm run clean && npm run init && npm run render && npm run copy && ls -ll dist/",
     "render": "node start.js",
     "clean": "rm -rf dist/*",
     "copy": "cp -f doc/**/*.png dist/ | : && cp -f doc/**/*.svg dist/| : && cp -f doc/**/*.jpg dist/| : && cp styles/main.css dist/main.css| : && npm run copy-bootstrap && npm run copy-jquery && npm run copy-highlight",
