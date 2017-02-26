@@ -9,7 +9,7 @@ function doCompile {
   npm run clean
   npm run dist
   npm run pdf
-  param="--page-size A4 --viewport-size 1024x768 --disable-smart-shrinking --outline --zoom 2"
+  param="--page-size A4 --viewport-size 1024x768 --disable-smart-shrinking --outline"
   wkhtmltox/bin/wkhtmltopdf $param dist/pdf.html dist/index.pdf
 }
 
