@@ -24,10 +24,22 @@ template | - | path to main handlebars template
 targetHtml| {cwd}/dist/index.html| html file 
 title | Documentation | title of documentation
 description | .. | description displayed below title
+pdf | false | render html for conversion to pdf
+pdfDownload| false | add a download link to 'index.pdf'
+description | .. | description displayed below title
 maxCommits | - | number of git commits to be displayed in history
 headerColor|#fff| color of title
 headerBgColor|#563d7c| color of header
 headerDescriptionColor|#cdbfe3| color of description
+
+
+# PDF
+
+To render a pdf version use [wkhtmltopdf](http://wkhtmltopdf.org/) (>0.12.4 with patched qt) which renders proper links and table of content
+
+````shell 
+wkhtmltopdf --page-size A4 --viewport-size 1024x768 --disable-smart-shrinking --zoom 5.5 --outline dist/pdf.html dist/index.pdf
+````
 
 # Credits
 
