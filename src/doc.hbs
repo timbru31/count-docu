@@ -24,11 +24,50 @@
         <div class="container" >
             <h1 style="color:{{headerColor}}">{{title}}</h1>
             <p style="color:{{headerDescriptionColor}}">{{description}}</p>
+            {{#if pdfDownload}}
+                <div style="float:right;">
+                    <a href="index.pdf" target="_blank" type="button" class="btn btn-default">
+                        <span class="glyphicon glyphicon-download-alt"> PDF</span>
+                    </a>
+                </div>
+            {{/if}}
         </div>
     </div>
     <div class="container">
-        <div class="row">
-            <div class="col-md-9" style="position:relative">
+        {{#if output.pdf}}
+                <nav id="navigation" >
+                    <ul class="nav ">
+                        <li>
+                            <a href="#history" class="history-nav">History</a>
+                        </li>
+                        {{#chapters}}
+                            <li>
+                                <a href="#{{ref link}}">{{inc @index}} {{title}}</a>
+                                {{#if chapters}}
+                                    <ul class="nav">
+                                        {{#chapters}}
+                                            <li>
+                                                <a href="#{{ref link}}">{{inc @../index}}.{{inc @index}} {{title}}</a>
+                                                {{#if chapters}}
+                                                    <ul class="nav">
+                                                        {{#chapters}}
+                                                            <li>
+                                                                <a href="#{{ref link}}">{{inc @../../index}}.{{inc @../index}}.{{inc @index}} {{title}}</a>
+                                                            </li>
+                                                        {{/chapters}}
+                                                    </ul>
+                                                {{/if}}
+                                            </li>
+                                        {{/chapters}}
+                                    </ul>
+                                {{/if}}
+                            </li>
+                        {{/chapters}}
+                    </ul>
+
+        {{/if}}
+        <div class="row {{#if output.pdf}}row-pdf{{/if}}">
+            <div class="{{#if output.html}}col-md-9{{/if}}" style="position:relative">
                 <div>
                     <h2 id="history">History</h2>
                     <table class="table">
@@ -44,11 +83,11 @@
                                 <td>{{author}}</td>
                                 <td>{{{plaintext message}}}</td>
                                 <td>
-                                    <li>
+                                    <ul>
                                         {{#links}}
                                         <li>
                                             {{#if exists}}
-                                                <a href="{{ref link}}">{{link}}</a>
+                                                <a href="#{{ref link}}">{{link}}</a>
                                             {{else}}
                                                 <a class="broken-link">{{link}}</a>
                                             {{/if}}
@@ -82,6 +121,7 @@
                     {{/chapters}}
                 {{/chapters}}
             </div>
+            {{#if output.html}}
             <div class="col-md-3">
                 <nav id="navigation" class="bs-docs-sidebar affix">
                     <ul class="nav bs-docs-sidenav">
@@ -114,6 +154,7 @@
                     </ul>
                 </nav>
             </div>
+            {{/if}}
         </div>
     </div>
     <footer class="footer">
@@ -124,6 +165,7 @@
     <script src="jquery/dist/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="bootstrap/dist/js/bootstrap.js"></script>
+    {{#if output.html}}
     <script>
         var headerHeight = document.querySelector(".js_header").getBoundingClientRect().height;
         var nav = $("#navigation");
@@ -149,5 +191,6 @@
             });
         });
     </script>
+    {{/if}}
     </body>
 </html>

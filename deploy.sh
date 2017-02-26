@@ -8,6 +8,7 @@ OUT_DIR=dist
 function doCompile {
   npm run clean
   npm run dist
+  npm run pdf
 }
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify

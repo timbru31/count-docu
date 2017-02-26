@@ -108,6 +108,8 @@ function generate(options) {
     doc.headerDescriptionColor = options.headerDescriptionColor;
     doc.date = new Date();
     doc.links = collectLinks(doc);
+    doc.output={pdf:options.pdf, html: !options.pdf};
+    doc.pdfDownload = options.pdfDownload;
 
 
     function _renderDoc() {

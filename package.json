@@ -22,14 +22,14 @@
   },
   "scripts": {
     "init": "mkdir -p dist && npm install",
-    "dist": "pwd && ls -ll && npm run clean && npm run init && npm run render && npm run copy && ls -ll dist/",
+    "dist": "pwd && ls -ll && npm run clean && npm run init && npm run render && npm run pdf && ls -ll dist/",
     "render": "node start.js",
     "clean": "rm -rf dist/*",
     "copy": "cp -f doc/**/*.png dist/ | : && cp -f doc/**/*.svg dist/| : && cp -f doc/**/*.jpg dist/| : && cp styles/main.css dist/main.css| : && npm run copy-bootstrap && npm run copy-jquery && npm run copy-highlight",
     "copy-bootstrap": "cp -r node_modules/bootstrap dist/bootstrap",
     "copy-jquery": "cp -r node_modules/jquery dist/jquery",
     "copy-highlight": "cp -r node_modules/highlight.js dist/highlight.js",
-    "pdf": "node script/pdf.js"
+    "pdf": "node pdf.js"
   },
   "dependencies": {
     "bootstrap": "^3.3.6",
@@ -38,7 +38,6 @@
     "file-exists": "^2.0.0",
     "handlebars": "^4.0.5",
     "highlight.js": "^8.9.1",
-    "html-pdf": "^2.0.1",
     "jquery": "^2.1.4",
     "marked": "^0.3.5",
     "path": "^0.12.7",
