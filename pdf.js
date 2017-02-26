@@ -1,6 +1,7 @@
 require('./src/index').generate({
     docGitPath: 'doc',
     source: process.cwd()+'/doc',
-    html: false
+    pdf: true,
+    targetHtml: process.cwd()+"/dist/pdf.html"
 })
 

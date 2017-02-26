@@ -9,8 +9,8 @@ function doCompile {
   npm run clean
   npm run dist
   npm run pdf
-  param="--page-size A4 --viewport-size 1024x768 --disable-smart-shrinking --zoom 2 --outline"
-  wkhtmltox/bin/wkhtmltopdf $param dist/index.html dist/index.pdf
+  param="--page-size A4 --viewport-size 1024x768 --disable-smart-shrinking --outline --zoom 2"
+  wkhtmltox/bin/wkhtmltopdf $param dist/pdf.html dist/index.pdf
 }
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
