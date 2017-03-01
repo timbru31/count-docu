@@ -79,7 +79,7 @@ function generate(options) {
         targetPath: targetPath,
         source: workingDir + "/src",
         template: template,
-        targetHtml: workingDir + outputDir + "/index.html",
+        targetHtml: workingDir + outputDir + (options.pdf?"/pdf.html":"/index.html"),
         title: "Documentation",
         description: "Nice project with a nice documentation",
         maxCommits: 10,
@@ -108,8 +108,14 @@ function generate(options) {
     doc.headerDescriptionColor = options.headerDescriptionColor;
     doc.date = new Date();
     doc.links = collectLinks(doc);
-    doc.output={pdf:options.pdf, html: !options.pdf};
+    doc.output = {pdf: options.pdf, html: !options.pdf};
     doc.pdfDownload = options.pdfDownload;
+
+    if (!options.pdf) {
+        doc.toc = false;
+    } else {
+        doc.toc = options.toc;
+    }
 
 
     function _renderDoc() {
