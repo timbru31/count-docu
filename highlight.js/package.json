@@ -1,19 +1,19 @@
 {
   "_args": [
     [
-      "highlight.js@^9.9.0",
+      "highlight.js@^9.11.0",
       "/home/travis/build/sinnerschrader/count-docu"
     ]
   ],
-  "_from": "highlight.js@>=9.9.0 <10.0.0",
-  "_id": "highlight.js@9.10.0",
+  "_from": "highlight.js@>=9.11.0 <10.0.0",
+  "_id": "highlight.js@9.11.0",
   "_inCache": true,
   "_installable": true,
   "_location": "/highlight.js",
   "_nodeVersion": "4.5.0",
   "_npmOperationalInternal": {
     "host": "packages-18-east.internal.npmjs.com",
-    "tmp": "tmp/highlight.js-9.10.0.tgz_1488958580032_0.6692452053539455"
+    "tmp": "tmp/highlight.js-9.11.0.tgz_1492586403999_0.9691430921666324"
   },
   "_npmUser": {
     "email": "maniac@softwaremaniacs.org",
@@ -23,19 +23,19 @@
   "_phantomChildren": {},
   "_requested": {
     "name": "highlight.js",
-    "raw": "highlight.js@^9.9.0",
-    "rawSpec": "^9.9.0",
+    "raw": "highlight.js@^9.11.0",
+    "rawSpec": "^9.11.0",
     "scope": null,
-    "spec": ">=9.9.0 <10.0.0",
+    "spec": ">=9.11.0 <10.0.0",
     "type": "range"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/highlight.js/-/highlight.js-9.10.0.tgz",
-  "_shasum": "f9f0b14c0be00f0e4fb1e577b749fed9e6f52f55",
+  "_resolved": "https://registry.npmjs.org/highlight.js/-/highlight.js-9.11.0.tgz",
+  "_shasum": "47f98c7399918700db2caf230ded12cec41a84ae",
   "_shrinkwrap": null,
-  "_spec": "highlight.js@^9.9.0",
+  "_spec": "highlight.js@^9.11.0",
   "_where": "/home/travis/build/sinnerschrader/count-docu",
   "author": {
     "email": "maniac@softwaremaniacs.org",
@@ -989,6 +989,18 @@
     {
       "email": "nene@triin.net",
       "name": "Rene Saarsoo"
+    },
+    {
+      "email": "jordi.petit@gmail.com",
+      "name": "Jordi Petit"
+    },
+    {
+      "email": "rparree@edc4it.com",
+      "name": "Raphaël Parrëe"
+    },
+    {
+      "email": "joel@porquet.org",
+      "name": "Joël Porquet"
     }
   ],
   "dependencies": {},
@@ -1009,8 +1021,8 @@
   },
   "directories": {},
   "dist": {
-    "shasum": "f9f0b14c0be00f0e4fb1e577b749fed9e6f52f55",
-    "tarball": "https://registry.npmjs.org/highlight.js/-/highlight.js-9.10.0.tgz"
+    "shasum": "47f98c7399918700db2caf230ded12cec41a84ae",
+    "tarball": "https://registry.npmjs.org/highlight.js/-/highlight.js-9.11.0.tgz"
   },
   "engines": {
     "node": "*"
@@ -1043,5 +1055,5 @@
     "test": "mocha test/",
     "test-browser": "mocha test/browser/"
   },
-  "version": "9.10.0"
+  "version": "9.11.0"
 }
