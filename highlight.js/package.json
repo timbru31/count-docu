@@ -1,11 +1,11 @@
 {
   "_args": [
     [
-      "highlight.js@^9.11.0",
+      "highlight.js@^9.9.0",
       "/home/travis/build/sinnerschrader/count-docu"
     ]
   ],
-  "_from": "highlight.js@>=9.11.0 <10.0.0",
+  "_from": "highlight.js@>=9.9.0 <10.0.0",
   "_id": "highlight.js@9.11.0",
   "_inCache": true,
   "_installable": true,
@@ -23,10 +23,10 @@
   "_phantomChildren": {},
   "_requested": {
     "name": "highlight.js",
-    "raw": "highlight.js@^9.11.0",
-    "rawSpec": "^9.11.0",
+    "raw": "highlight.js@^9.9.0",
+    "rawSpec": "^9.9.0",
     "scope": null,
-    "spec": ">=9.11.0 <10.0.0",
+    "spec": ">=9.9.0 <10.0.0",
     "type": "range"
   },
   "_requiredBy": [
@@ -35,7 +35,7 @@
   "_resolved": "https://registry.npmjs.org/highlight.js/-/highlight.js-9.11.0.tgz",
   "_shasum": "47f98c7399918700db2caf230ded12cec41a84ae",
   "_shrinkwrap": null,
-  "_spec": "highlight.js@^9.11.0",
+  "_spec": "highlight.js@^9.9.0",
   "_where": "/home/travis/build/sinnerschrader/count-docu",
   "author": {
     "email": "maniac@softwaremaniacs.org",
