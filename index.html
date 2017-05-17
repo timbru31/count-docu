@@ -20,59 +20,71 @@
 
 </head>
 <body>
-    <div class="js_header bs-docs-header" style="background-color: #563d7c;" id="content" tabindex="-1">
-        <div class="container" >
-            <h1 style="color:#fff">Documentation</h1>
-            <p style="color:#cdbfe3">Nice project with a nice documentation</p>
-                <div style="float:right;">
-                    <a href="index.pdf" target="_blank" type="button" class="btn btn-default">
-                        <span class="glyphicon glyphicon-download-alt"> PDF</span>
-                    </a>
-                </div>
-        </div>
-    </div>
+<div class="js_header bs-docs-header" style="background-color: #563d7c;" id="content" tabindex="-1">
     <div class="container">
-        <div class="row ">
-            <div class="col-md-9" style="position:relative">
-                <div>
-                    <h2 id="history">History</h2>
-                    <table class="table">
+        <h1 style="color:#fff">Documentation</h1>
+        <p style="color:#cdbfe3">Nice project with a nice documentation</p>
+            <div style="float:right;">
+                <a href="index.pdf" target="_blank" type="button" class="btn btn-default">
+                    <span class="glyphicon glyphicon-download-alt"> PDF</span>
+                </a>
+            </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row ">
+        <div class="col-md-9" style="position:relative">
+            <div>
+                <h2 id="history">History</h2>
+                <table class="table">
+                    <tr>
+                        <th>date</th>
+                        <th>author</th>
+                        <th>message</th>
+                        <th>changed chapters</th>
+                    </tr>
                         <tr>
-                            <th>date</th>
-                            <th>author</th>
-                            <th>message</th>
-                            <th>changed chapters</th>
-                        </tr>
-                            <tr>
-                                <td>12.5.17</td>
-                                <td>Kolja Schönig </td>
-                                <td>    adding the copy to clipboard button for code blocks<BR><BR></td>
-                                <td>
-                                    <ul>
+                            <td>17.5.17</td>
+                            <td>Kolja Schönig </td>
+                            <td>    changing the default to show the copy to clipboard button<BR><BR></td>
+                            <td>
+                                <ul>
                                         <li>
                                                 <a href="#_introduction_special_features">/Introduction/Special Features</a>
                                         </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td>22.2.17</td>
-                                <td>stefan meyer </td>
-                                <td>    some simple changes<BR><BR></td>
-                                <td>
-                                    <ul>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>12.5.17</td>
+                            <td>Kolja Schönig </td>
+                            <td>    adding the copy to clipboard button for code blocks<BR><BR></td>
+                            <td>
+                                <ul>
+                                        <li>
+                                                <a href="#_introduction_special_features">/Introduction/Special Features</a>
+                                        </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22.2.17</td>
+                            <td>stefan meyer </td>
+                            <td>    some simple changes<BR><BR></td>
+                            <td>
+                                <ul>
                                         <li>
                                                 <a href="#_introduction_documentation">/Introduction/Documentation</a>
                                         </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                    </table>
-                </div>
+                                </ul>
+                            </td>
+                        </tr>
+                </table>
+            </div>
 
-                    <h2 id="_introduction">1 Introduction</h2>
-                    
-                        <p>This is a chapter intro text.</p>
+                <h2 id="_introduction">1 Introduction</h2>
+                
+                    <p>This is a chapter intro text.</p>
 <p><div class="center-block caption-fix">
     <img src="diagram.puml" class="center-block img-responsive" alt="title" />
     <div class="caption">
@@ -80,8 +92,8 @@
     </div>
 </div> </p>
 
-                        <h3 id="_introduction_documentation">1.1 Documentation</h3>
-                        <p>This is the sub chapter &quot;Documentation&quot;</p>
+                    <h3 id="_introduction_documentation">1.1 Documentation</h3>
+                    <p>This is the sub chapter &quot;Documentation&quot;</p>
 <h4>Images</h4><p><div class="center-block caption-fix">
     <img src="image.jpg" class="center-block img-responsive" alt="title" />
     <div class="caption">
@@ -109,8 +121,8 @@
 </tr>
 </tbody>
 </table>
-<h4>Sourcecode</h4><pre><code class="lang-javascript"><span class="hljs-keyword">if</span> (x==<span class="hljs-number">1</span>) javascript.<span class="hljs-keyword">format</span>(<span class="hljs-string">"nicely"</span>);
-</code></pre>
+<h4>Sourcecode</h4><pre class='code-pre'><code class="lang-javascript"><span class="hljs-keyword">if</span> (x==<span class="hljs-number">1</span>) javascript.<span class="hljs-keyword">format</span>(<span class="hljs-string">"nicely"</span>);
+</code><button class='js-copyCodeToBtn code-button' data-code='if (x==1) javascript.format("nicely");'>Copy code to clipboard</button></pre>
 <h4>Diagrams</h4><p>You can integrate <a href="http://www.plantuml.com">plantuml</a> diagrams</p>
 <p><div class="center-block caption-fix">
     <img src="diagram.puml" class="center-block img-responsive" alt="title" />
@@ -119,24 +131,37 @@
     </div>
 </div></p>
 
-                        <h3 id="_introduction_special_features">1.2 Special Features</h3>
-                        <h4>Callout</h4><p>There are three different callouts : warning, danger and info.</p>
-<pre><code class="lang-md"><span class="hljs-meta"> &gt;</span><span class="bash"> [[danger]]  __headline__</span>
+                    <h3 id="_introduction_special_features">1.2 Special Features</h3>
+                    <h4>Callout</h4><p>There are three different callouts : warning, danger and info.</p>
+<pre class='code-pre'><code class="lang-md"><span class="hljs-meta"> &gt;</span><span class="bash"> [[danger]]  __headline__</span>
 <span class="hljs-meta"> &gt;</span><span class="bash"> Here comes the important info</span>
 <span class="hljs-meta"> &gt;</span><span class="bash"></span>
-</code></pre>
+</code><button class='js-copyCodeToBtn code-button' data-code=' > [[danger]]  __headline__
+ > Here comes the important info
+ >'>Copy code to clipboard</button></pre>
 <div class="bs-callout bs-callout-danger"><p> <strong>headline</strong></p>
 <p>Here comes the important info</p>
-</div><h4>Link to Chapter</h4><pre><code class="lang-md">[<span class="hljs-string">Link to Documentation</span>](<span class="hljs-link">ref:/Introduction/Documentation</span>)
-</code></pre>
+</div><h4>Link to Chapter</h4><pre class='code-pre'><code class="lang-md">[<span class="hljs-string">Link to Documentation</span>](<span class="hljs-link">ref:/Introduction/Documentation</span>)
+</code><button class='js-copyCodeToBtn code-button' data-code='[Link to Documentation](ref:/Introduction/Documentation)'>Copy code to clipboard</button></pre>
 <p> <a href="#_introduction_documentation">Link to Documentation</a></p>
 <p> Links are checked at generation time and broken links fail the generation.</p>
-<h4>Copy to Clipboard Button</h4><p> Adding a copy to clipboard button by extending the language in a code by &quot;|ctc&quot;. All code inside the block will be copied.
- The button will appear while hovering over the code block.</p>
-<pre class='code-pre'><code class="lang-md"> this <span class="hljs-built_in">text</span> will be copied <span class="hljs-keyword">to</span> <span class="hljs-built_in">the clipboard</span>
-</code><button class='js-copyCodeToBtn code-button' data-code=' this text will be copied to the clipboard'>Copy code to clipboard</button></pre>
+<h4>Copy to Clipboard Button</h4><p> A copy to clipboard button will added to all code blocks by default. This can be overruled by the adding &quot;|noctc&quot;.</p>
+<pre class='code-pre'><code> ```` md|noctc
+ this <span class="hljs-keyword">code</span> has no copy to clipboard button 
+ ```` 
+</code><button class='js-copyCodeToBtn code-button' data-code=' ```` md|noctc
+ this code has no copy to clipboard button 
+ ```` '>Copy code to clipboard</button></pre><pre><code class="lang-md"> this code <span class="hljs-built_in">has</span> <span class="hljs-keyword">no</span> <span class="hljs-keyword">copy</span> <span class="hljs-keyword">to</span> clipboard button
+</code></pre>
+<pre class='code-pre'><code>  ```` md
+  this <span class="hljs-keyword">code</span> has a copy to clipboard button 
+  ```` 
+</code><button class='js-copyCodeToBtn code-button' data-code='  ```` md
+  this code has a copy to clipboard button 
+  ```` '>Copy code to clipboard</button></pre><pre class='code-pre'><code class="lang-md">  this <span class="hljs-selector-tag">code</span> has <span class="hljs-selector-tag">a</span> copy to clipboard button
+</code><button class='js-copyCodeToBtn code-button' data-code='  this code has a copy to clipboard button'>Copy code to clipboard</button></pre>
 
-            </div>
+        </div>
             <div class="col-md-3">
                 <nav id="navigation" class="bs-docs-sidebar affix">
                     <ul class="nav bs-docs-sidenav">
@@ -145,36 +170,36 @@
                         </li>
                             <li>
                                 <a href="#_introduction">1 Introduction</a>
-                                <ul class="nav">
-                                        <li>
-                                            <a href="#_introduction_documentation">1.1 Documentation</a>
-                                        </li>
-                                        <li>
-                                            <a href="#_introduction_special_features">1.2 Special Features</a>
-                                        </li>
-                                </ul>
+                                    <ul class="nav">
+                                            <li>
+                                                <a href="#_introduction_documentation">1.1 Documentation</a>
+                                            </li>
+                                            <li>
+                                                <a href="#_introduction_special_features">1.2 Special Features</a>
+                                            </li>
+                                    </ul>
                             </li>
                     </ul>
                 </nav>
             </div>
-        </div>
     </div>
-    <footer class="footer">
-        <p>generated on 12.5.17 by <a href="https://github.com/sinnerschrader/count-docu">count-docu</a></p>
-    </footer>
+</div>
+<footer class="footer">
+    <p>generated on 17.5.17 by <a href="https://github.com/sinnerschrader/count-docu">count-docu</a></p>
+</footer>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="jquery/dist/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/dist/js/bootstrap.js"></script>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="jquery/dist/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="bootstrap/dist/js/bootstrap.js"></script>
     <script>
         var headerHeight = document.querySelector(".js_header").getBoundingClientRect().height;
         var nav = $("#navigation");
         function checkScroll() {
             var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-            if (headerHeight<scrollTop) {
+            if (headerHeight < scrollTop) {
                 nav.addClass("affix");
-            } else{
+            } else {
                 nav.removeClass("affix");
             }
         }
@@ -186,29 +211,32 @@
         checkScroll();
 
         $(document).ready(function () {
-            $('#navigation a').click(function(){
+            $('#navigation a').click(function () {
                 var match = $(this).attr('href').match(/#\S+/);
                 ga('send', 'pageview', location.pathname + match[0]);
             });
         });
 
-        var copyTextareaBtn = document.querySelector('.js-copyCodeToBtn');
+        var copyTextareaBtn = document.querySelectorAll('.js-copyCodeToBtn');
 
-        copyTextareaBtn.addEventListener('click', function(event) {
-          var textAreaToCopy = document.createElement('textarea');
-          textAreaToCopy.value = copyTextareaBtn.dataset.code;
-          document.body.appendChild(textAreaToCopy);
-          textAreaToCopy.select();
+        copyTextareaBtn.forEach(function (e) {
+            e.addEventListener('click', function (event) {
+                var textAreaToCopy = document.createElement('textarea');
+                textAreaToCopy.value = e.dataset.code;
+                document.body.appendChild(textAreaToCopy);
+                textAreaToCopy.select();
 
-          try {
-            document.execCommand('copy');
-          } catch (err) {
-            console.log('unable to copy to the clipboard');
-          } finally {
-              document.body.removeChild(textAreaToCopy);
-          }
-        });
+                try {
+                    document.execCommand('copy');
+                } catch (err) {
+                    console.log('unable to copy to the clipboard');
+                } finally {
+                    document.body.removeChild(textAreaToCopy);
+                }
+            }
+        )});
+
 
     </script>
-    </body>
+</body>
 </html>
