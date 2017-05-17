@@ -20,42 +20,66 @@
 
 </head>
 <body>
-    <div class="js_header bs-docs-header" style="background-color: #563d7c;" id="content" tabindex="-1">
-        <div class="container" >
-            <h1 style="color:#fff">Documentation</h1>
-            <p style="color:#cdbfe3">Nice project with a nice documentation</p>
-        </div>
-    </div>
+<div class="js_header bs-docs-header" style="background-color: #563d7c;" id="content" tabindex="-1">
     <div class="container">
-        <div class="row row-pdf">
-            <div class="" style="position:relative">
-                <div>
-                    <h2 id="history">History</h2>
-                    <table class="table">
+        <h1 style="color:#fff">Documentation</h1>
+        <p style="color:#cdbfe3">Nice project with a nice documentation</p>
+    </div>
+</div>
+<div class="container">
+    <div class="row row-pdf">
+        <div class="" style="position:relative">
+            <div>
+                <h2 id="history">History</h2>
+                <table class="table">
+                    <tr>
+                        <th>date</th>
+                        <th>author</th>
+                        <th>message</th>
+                        <th>changed chapters</th>
+                    </tr>
                         <tr>
-                            <th>date</th>
-                            <th>author</th>
-                            <th>message</th>
-                            <th>changed chapters</th>
+                            <td>17.5.17</td>
+                            <td>Kolja Schönig </td>
+                            <td>    changing the default to show the copy to clipboard button<BR><BR></td>
+                            <td>
+                                <ul>
+                                        <li>
+                                                <a href="#_introduction_special_features">/Introduction/Special Features</a>
+                                        </li>
+                                </ul>
+                            </td>
                         </tr>
-                            <tr>
-                                <td>22.2.17</td>
-                                <td>stefan meyer </td>
-                                <td>    some simple changes<BR><BR></td>
-                                <td>
-                                    <ul>
+                        <tr>
+                            <td>12.5.17</td>
+                            <td>Kolja Schönig </td>
+                            <td>    adding the copy to clipboard button for code blocks<BR><BR></td>
+                            <td>
+                                <ul>
+                                        <li>
+                                                <a href="#_introduction_special_features">/Introduction/Special Features</a>
+                                        </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>22.2.17</td>
+                            <td>stefan meyer </td>
+                            <td>    some simple changes<BR><BR></td>
+                            <td>
+                                <ul>
                                         <li>
                                                 <a href="#_introduction_documentation">/Introduction/Documentation</a>
                                         </li>
-                                    </ul>
-                                </td>
-                            </tr>
-                    </table>
-                </div>
+                                </ul>
+                            </td>
+                        </tr>
+                </table>
+            </div>
 
-                    <h2 id="_introduction">1 Introduction</h2>
-                    
-                        <p>This is a chapter intro text.</p>
+                <h2 id="_introduction">1 Introduction</h2>
+                
+                    <p>This is a chapter intro text.</p>
 <p><div class="center-block caption-fix">
     <img src="diagram.puml" class="center-block img-responsive" alt="title" />
     <div class="caption">
@@ -63,8 +87,8 @@
     </div>
 </div> </p>
 
-                        <h3 id="_introduction_documentation">1.1 Documentation</h3>
-                        <p>This is the sub chapter &quot;Documentation&quot;</p>
+                    <h3 id="_introduction_documentation">1.1 Documentation</h3>
+                    <p>This is the sub chapter &quot;Documentation&quot;</p>
 <h4>Images</h4><p><div class="center-block caption-fix">
     <img src="image.jpg" class="center-block img-responsive" alt="title" />
     <div class="caption">
@@ -92,7 +116,7 @@
 </tr>
 </tbody>
 </table>
-<h4>Sourcecode</h4><pre><code class="lang-javascript"><span class="hljs-keyword">if</span> (x==<span class="hljs-number">1</span>) javascript.format(<span class="hljs-string">"nicely"</span>);
+<h4>Sourcecode</h4><pre><code class="lang-javascript"><span class="hljs-keyword">if</span> (x==<span class="hljs-number">1</span>) javascript.<span class="hljs-keyword">format</span>(<span class="hljs-string">"nicely"</span>);
 </code></pre>
 <h4>Diagrams</h4><p>You can integrate <a href="http://www.plantuml.com">plantuml</a> diagrams</p>
 <p><div class="center-block caption-fix">
@@ -102,29 +126,40 @@
     </div>
 </div></p>
 
-                        <h3 id="_introduction_special_features">1.2 Special Features</h3>
-                        <h4>Callout</h4><p>There are three different callouts : warning, danger and info.</p>
-<pre><code class="lang-md"> &gt; <span class="hljs-string">[[danger]]</span>  __headline__
- &gt; Here comes the important info
- &gt;
+                    <h3 id="_introduction_special_features">1.2 Special Features</h3>
+                    <h4>Callout</h4><p>There are three different callouts : warning, danger and info.</p>
+<pre><code class="lang-md"><span class="hljs-meta"> &gt;</span><span class="bash"> [[danger]]  __headline__</span>
+<span class="hljs-meta"> &gt;</span><span class="bash"> Here comes the important info</span>
+<span class="hljs-meta"> &gt;</span><span class="bash"></span>
 </code></pre>
 <div class="bs-callout bs-callout-danger"><p> <strong>headline</strong></p>
 <p>Here comes the important info</p>
-</div><h4>Link to Chapter</h4><pre><code class="lang-md">[<span class="hljs-link_label">Link to Documentation</span>](<span class="hljs-link_url">ref:/Introduction/Documentation</span>)
+</div><h4>Link to Chapter</h4><pre><code class="lang-md">[<span class="hljs-string">Link to Documentation</span>](<span class="hljs-link">ref:/Introduction/Documentation</span>)
 </code></pre>
 <p> <a href="#_introduction_documentation">Link to Documentation</a></p>
 <p> Links are checked at generation time and broken links fail the generation.</p>
+<h4>Copy to Clipboard Button</h4><p> A copy to clipboard button will added to all code blocks by default. This can be overruled by the adding &quot;|noctc&quot;.</p>
+<pre><code> ```` md|noctc
+ this <span class="hljs-keyword">code</span> has no copy to clipboard button 
+ ```` 
+</code></pre><pre><code class="lang-md"> this code <span class="hljs-built_in">has</span> <span class="hljs-keyword">no</span> <span class="hljs-keyword">copy</span> <span class="hljs-keyword">to</span> clipboard button
+</code></pre>
+<pre><code>  ```` md
+  this <span class="hljs-keyword">code</span> has a copy to clipboard button 
+  ```` 
+</code></pre><pre><code class="lang-md">  this <span class="hljs-selector-tag">code</span> has <span class="hljs-selector-tag">a</span> copy to clipboard button
+</code></pre>
 
-            </div>
         </div>
     </div>
-    <footer class="footer">
-        <p>generated on 17.5.17 by <a href="https://github.com/sinnerschrader/count-docu">count-docu</a></p>
-    </footer>
+</div>
+<footer class="footer">
+    <p>generated on 17.5.17 by <a href="https://github.com/sinnerschrader/count-docu">count-docu</a></p>
+</footer>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="jquery/dist/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="bootstrap/dist/js/bootstrap.js"></script>
-    </body>
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="jquery/dist/jquery.min.js"></script>
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="bootstrap/dist/js/bootstrap.js"></script>
+</body>
 </html>
