@@ -1,41 +1,36 @@
 {
   "_args": [
     [
-      "highlight.js@^9.9.0",
+      "highlight.js@^8.9.1",
       "/home/travis/build/sinnerschrader/count-docu"
     ]
   ],
-  "_from": "highlight.js@>=9.9.0 <10.0.0",
-  "_id": "highlight.js@9.11.0",
+  "_from": "highlight.js@>=8.9.1 <9.0.0",
+  "_id": "highlight.js@8.9.1",
   "_inCache": true,
   "_installable": true,
   "_location": "/highlight.js",
-  "_nodeVersion": "4.5.0",
-  "_npmOperationalInternal": {
-    "host": "packages-18-east.internal.npmjs.com",
-    "tmp": "tmp/highlight.js-9.11.0.tgz_1492586403999_0.9691430921666324"
-  },
   "_npmUser": {
     "email": "maniac@softwaremaniacs.org",
     "name": "isagalaev"
   },
-  "_npmVersion": "2.15.9",
+  "_npmVersion": "1.4.28",
   "_phantomChildren": {},
   "_requested": {
     "name": "highlight.js",
-    "raw": "highlight.js@^9.9.0",
-    "rawSpec": "^9.9.0",
+    "raw": "highlight.js@^8.9.1",
+    "rawSpec": "^8.9.1",
     "scope": null,
-    "spec": ">=9.9.0 <10.0.0",
+    "spec": ">=8.9.1 <9.0.0",
     "type": "range"
   },
   "_requiredBy": [
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/highlight.js/-/highlight.js-9.11.0.tgz",
-  "_shasum": "47f98c7399918700db2caf230ded12cec41a84ae",
+  "_resolved": "https://registry.npmjs.org/highlight.js/-/highlight.js-8.9.1.tgz",
+  "_shasum": "b8a9c5493212a9392f0222b649c9611497ebfb88",
   "_shrinkwrap": null,
-  "_spec": "highlight.js@^9.9.0",
+  "_spec": "highlight.js@^8.9.1",
   "_where": "/home/travis/build/sinnerschrader/count-docu",
   "author": {
     "email": "maniac@softwaremaniacs.org",
@@ -255,7 +250,7 @@
       "name": "Jason Tate"
     },
     {
-      "email": "sergey@tikhomirov.io",
+      "email": "me@stikhomirov.com",
       "name": "Sergey Tikhomirov"
     },
     {
@@ -776,253 +771,27 @@
     },
     {
       "email": "ladislav@prskavec.net",
-      "name": "Ladislav Prskavec"
-    },
-    {
-      "email": "jkuehle90@gmail.com",
-      "name": "Jan Kühle"
-    },
-    {
-      "email": "stwienert@gmail.com",
-      "name": "Stefan Wienert"
-    },
-    {
-      "email": "zitros.lab@gmail.com",
-      "name": "Nikita Savchenko"
-    },
-    {
-      "email": "s.mellai@arduino.cc",
-      "name": "Stefania Mellai"
-    },
-    {
-      "email": "nebuleon.fumika@gmail.com",
-      "name": "Nebuleon Fumika"
-    },
-    {
-      "email": "MC.prince.0203@gmail.com",
-      "name": "prince"
-    },
-    {
-      "email": "rocks.brendan@gmail.com",
-      "name": "Brendan Rocks"
-    },
-    {
-      "email": "raph@raphnet.net",
-      "name": "Raphaël Assénat"
-    },
-    {
-      "email": "matt@aptech.com",
-      "name": "Matt Evans"
-    },
-    {
-      "email": "martin.braun@ettus.com",
-      "name": "Martin Braun"
-    },
-    {
-      "email": "boris@performancejs.com",
-      "name": "Boris Cherny"
-    },
-    {
-      "email": "jfoster@esri.com",
-      "name": "John Foster"
-    },
-    {
-      "email": "robert.dodier@gmail.com",
-      "name": "Robert Dodier"
-    },
-    {
-      "email": "dev.anthonydugois@gmail.com",
-      "name": "Anthony Dugois"
-    },
-    {
-      "email": "qeole@outlook.com",
-      "name": "Qeole"
-    },
-    {
-      "email": "dciccale@gmail.com",
-      "name": "Denis Ciccale"
-    },
-    {
-      "email": "lastobelus@gmail.com",
-      "name": "Michael Johnston"
-    },
-    {
-      "email": "oxdef@oxdef.info",
-      "name": "Taras"
-    },
-    {
-      "email": "ph.wolfer@gmail.com",
-      "name": "Philipp Wolfer"
-    },
-    {
-      "email": "mikko.kouhia@iki.fi",
-      "name": "Mikko Kouhia"
-    },
-    {
-      "email": "chinbillybilbo@gmail.com",
-      "name": "Billy Quith"
-    },
-    {
-      "email": "initbar@protonmail.ch",
-      "name": "Herbert Shin"
-    },
-    {
-      "email": "tajmone@gmail.com",
-      "name": "Tristano Ajmone"
-    },
-    {
-      "email": "temp-impl@users.noreply.github.com",
-      "name": "Taisuke Fujimoto"
-    },
-    {
-      "email": "boone.severson@gmail.com",
-      "name": "Boone Severson"
-    },
-    {
-      "email": "OiCMudkips@users.noreply.github.com",
-      "name": "Victor Zhou"
-    },
-    {
-      "email": "kartoffelbrei.mit.muskatnuss@gmail.org",
-      "name": "Lars Schulna"
-    },
-    {
-      "email": "jacobc@gmail.com",
-      "name": "Jacob Childress"
-    },
-    {
-      "email": "gavsiu@gmail.com",
-      "name": "Gavin Siu"
-    },
-    {
-      "email": "buildersbrewery@gmail.com",
-      "name": "Builder's Brewery"
-    },
-    {
-      "email": "sergeyb@bronevichok.ru",
-      "name": "Sergey Bronnikov"
-    },
-    {
-      "email": "joe.eli.mac@gmail.org",
-      "name": "Joe Eli McIlvain"
-    },
-    {
-      "email": "stephan@stephanboyer.com",
-      "name": "Stephan Boyer"
-    },
-    {
-      "email": "alex@nullscope.net",
-      "name": "Alex McKibben"
-    },
-    {
-      "email": "hellodanielgamage@gmail.com",
-      "name": "Daniel Gamage"
-    },
-    {
-      "email": "matthewbdaly@gmail.com",
-      "name": "Matthew Daly"
-    },
-    {
-      "email": "mmadsen@uwaterloo.ca",
-      "name": "Magnus Madsen"
-    },
-    {
-      "email": "info@camilstaps.nl",
-      "name": "Camil Staps"
-    },
-    {
-      "email": "manniL@gmx.net",
-      "name": "Alexander Lichter"
-    },
-    {
-      "email": "contact@nlegall.fr",
-      "name": "Nicolas Le Gall"
-    },
-    {
-      "email": "kentonh@gmail.com",
-      "name": "Kenton Hamaluik"
-    },
-    {
-      "email": "contact@zgmrvn.com",
-      "name": "Marvin Saignat"
-    },
-    {
-      "email": "contact@f0rki.at",
-      "name": "Michael Rodler"
-    },
-    {
-      "email": "s.sobko@profitware.ru",
-      "name": "Sergey Sobko"
-    },
-    {
-      "email": "halechan@qq.com",
-      "name": "Hale Chan"
-    },
-    {
-      "email": "syrius3@gmail.com",
-      "name": "Matt Evans"
-    },
-    {
-      "email": "kma_untrusted@protonmail.com",
-      "name": "Kasper Andersen"
-    },
-    {
-      "email": "flying-sheep@web.de",
-      "name": "Philipp A."
-    },
-    {
-      "email": "guannanwei@outlook.com",
-      "name": "Guannan Wei"
-    },
-    {
-      "email": "samsam2310@gmail.com",
-      "name": "Sam Wu"
-    },
-    {
-      "email": "dempfi@yahoo.com",
-      "name": "Ike Ku"
-    },
-    {
-      "email": "andres.taht@gmail.com",
-      "name": "Andres Täht"
-    },
-    {
-      "email": "nene@triin.net",
-      "name": "Rene Saarsoo"
-    },
-    {
-      "email": "jordi.petit@gmail.com",
-      "name": "Jordi Petit"
-    },
-    {
-      "email": "rparree@edc4it.com",
-      "name": "Raphaël Parrëe"
-    },
-    {
-      "email": "joel@porquet.org",
-      "name": "Joël Porquet"
+      "name": "Ladislav Prskavec:"
     }
   ],
   "dependencies": {},
   "description": "Syntax highlighting with language autodetection.",
   "devDependencies": {
-    "bluebird": "^3.0.1",
+    "bluebird": "^2.9.30",
     "commander": "^2.3.0",
-    "del": "^2.0.2",
+    "del": "^1.1.1",
     "gear": "^0.9.4",
     "gear-lib": "^0.9.2",
-    "glob": "^7.0.3",
-    "js-beautify": "^1.5.10",
-    "jsdom": "^9.2.1",
-    "lodash": "^4.0.0",
+    "glob": "^5.0.5",
+    "jsdom": "3.1.2",
+    "lodash": "^3.3.1",
     "mocha": "^2.0.1",
-    "should": "^9.0.2",
-    "tiny-worker": "^1.1.1"
+    "should": "^7.0.1"
   },
   "directories": {},
   "dist": {
-    "shasum": "47f98c7399918700db2caf230ded12cec41a84ae",
-    "tarball": "https://registry.npmjs.org/highlight.js/-/highlight.js-9.11.0.tgz"
+    "shasum": "b8a9c5493212a9392f0222b649c9611497ebfb88",
+    "tarball": "https://registry.npmjs.org/highlight.js/-/highlight.js-8.9.1.tgz"
   },
   "engines": {
     "node": "*"
@@ -1052,8 +821,7 @@
     "url": "git://github.com/isagalaev/highlight.js.git"
   },
   "scripts": {
-    "test": "mocha test/",
-    "test-browser": "mocha test/browser/"
+    "test": "mocha test/"
   },
-  "version": "9.11.0"
+  "version": "8.9.1"
 }

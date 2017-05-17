@@ -28,7 +28,7 @@ module.exports = function(hljs) {
 
   var TYPE = {
     className: 'type',
-    begin: '\\b[A-Z][\\w\u00C0-\u02B8\']*',
+    begin: '\\b[A-Z][\\w\']*',
     relevance: 0
   };
   var BLOCK_COMMENT = hljs.COMMENT(
@@ -63,14 +63,17 @@ module.exports = function(hljs) {
       TYPE,
       NUMBERS,
       {
-        className: 'function',
+        className: 'func',
         beginKeywords: 'func', end: '{', excludeEnd: true,
         contains: [
           hljs.inherit(hljs.TITLE_MODE, {
-            begin: /[A-Za-z$_][0-9A-Za-z$_]*/
+            begin: /[A-Za-z$_][0-9A-Za-z$_]*/,
+            illegal: /\(/
           }),
           {
-            begin: /</, end: />/
+            className: 'generics',
+            begin: /</, end: />/,
+            illegal: />/
           },
           {
             className: 'params',
@@ -95,11 +98,11 @@ module.exports = function(hljs) {
         end: '\\{',
         excludeEnd: true,
         contains: [
-          hljs.inherit(hljs.TITLE_MODE, {begin: /[A-Za-z$_][\u00C0-\u02B80-9A-Za-z$_]*/})
+          hljs.inherit(hljs.TITLE_MODE, {begin: /[A-Za-z$_][0-9A-Za-z$_]*/})
         ]
       },
       {
-        className: 'meta', // @attributes
+        className: 'preprocessor', // @attributes
         begin: '(@warn_unused_result|@exported|@lazy|@noescape|' +
                   '@NSCopying|@NSManaged|@objc|@convention|@required|' +
                   '@noreturn|@IBAction|@IBDesignable|@IBInspectable|@IBOutlet|' +
