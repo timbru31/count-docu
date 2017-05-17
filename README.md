@@ -4,7 +4,17 @@ documents.
 
 # How to use
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/sinnerschrader/count-docu.svg)](https://greenkeeper.io/)
+
 Features are best explored by looking into the [documentation](//sinnerschrader.github.io/count-docu/).
+
+# Prerequisite
+You have to install pandoc: http://pandoc.org/installing.html
+
+Install [Graphviz](http://www.graphviz.org/Download.php) for UML diagrams via [plantuml](http://www.plantuml.com) 
+
+For PDF generation install [wkhtmltopdf](https://wkhtmltopdf.org/).
+
 
 # How to integrate
 
