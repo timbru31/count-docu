@@ -1,6 +1,6 @@
 var getFilesInCommit = function (commitId, docGitPath) {
     var exec = require('child_process').execSync;
-    var cmd = 'git diff-tree --name-only -r ' + commitId;
+    var cmd = 'git diff-tree --name-only -r "' + commitId+ '"';
     var stdout = exec(cmd);
 
     var pattern = new RegExp(docGitPath + '.*\.md');
@@ -24,15 +24,15 @@ var getChangeLog = function (options, cb) {
         var history = [];
         var commits = stdout.split('commit');
         commits.forEach(function (commit) {
-            var result = commit.match(/(.*)\nAuthor: (.*)<.*>\nDate: (.*)([\s\S]*)/);
+            var result = commit.match(/(.*)(\nMerge: .*)?\nAuthor: (.*)<.*>\nDate: (.*)([\s\S]*)/);
             if (result != null) {
                 var id = result[1].trim();
-                var date = new Date(Date.parse(result[3]));
+                var date = new Date(Date.parse(result[4]));
                 var historyCommit = {
                     id: id,
-                    author: result[2],
+                    author: result[3],
                     date: date,
-                    message: result[4]
+                    message: result[5]
                 }
                 var files = getFilesInCommit(id, options.docGitPath);
                 if (files.length > 0) {
