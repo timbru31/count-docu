@@ -33,7 +33,7 @@
     "pdf": "node pdf.js"
   },
   "dependencies": {
-    "bootstrap": "^3.3.6",
+    "bootstrap": "^4.0.0",
     "colors": "^1.1.2",
     "file": "^0.2.2",
     "file-exists": "^3.0.1",
